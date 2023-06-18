@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+  --clr-primiry: hsl(0, 100%, 65%);
+  --clr-primiry-200: hsl(0, 100%, 70%);
+  --clr-primiry-250: hsl(0, 100%, 60%);
+  --clr-primiry-300: hsl(0, 100%, 50%);
+  --clr-secondary-300: hsl(46, 100%, 67%);
+  --clr-secondary-400: hsl(46, 100%, 57%);
+  --clr-secondary-500: hsl(46, 100%, 47%);
+  --clr-secondary-600: hsl(46, 100%, 42%);
+  --clr-bg: hsl(271, 68%, 85%);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-bg);
+  padding: 1.6rem 0;
+}
+
+.app {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.status {
+  color: var(--clr-primiry);
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 13.125rem; /* 210px */
+  height: 13.125rem; /* 210px */
+  border: 2px solid var(--clr-primiry);
+  box-sizing: content-box;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.box {
+  width: 4.375rem; /* 70px */
+  height: 4.375rem; /* 70px */
+  border: 2px solid var(--clr-primiry);
+  background: var(--clr-secondary-400);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: var(--clr-primiry);
+  font-weight: 600;
+}
+.box:hover {
+  background: var(--clr-secondary-500);
+}
+.box:active {
+  background: var(--clr-secondary-600);
+}
+
+.btn {
+  border: 2px solid var(--clr-primiry);
+  background-color: var(--clr-secondary-400);
+  color: var(--clr-primiry);
+  padding: 0.4rem 1.6rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btn:hover {
+  background: var(--clr-secondary-300);
+}
+.btn:active {
+  background: var(--clr-secondary-500);
+}
+
+.history-container {
+  width: 13.125rem;
+}
+
+.history-btn {
+  background-color: var(--clr-primiry);
+  color: var(--clr-bg);
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 100%;
+  border: none;
+  margin-bottom: 0.1rem;
+}
+.history-btn:hover {
+  background-color: var(--clr-primiry-300);
+}
+.history-btn:active {
+  background-color: var(--clr-primiry-250);
+}
+.history-btn:disabled {
+  cursor: initial;
+  background-color: var(--clr-primiry-200);
+}
+
+/* 480px */
+@media screen and (min-width: 30em) {
+  .app {
+    flex-direction: row;
+  }
+}
